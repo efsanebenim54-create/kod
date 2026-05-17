@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenerbahçe Başkanlık Seçimi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #030a16;
+            /* Görseldeki gibi meşaleli, bayraklı stadyum arka planı ve üzerine tam uyan lacivert gradyan basımı */
+            background-image: linear-gradient(to bottom, rgba(3, 10, 22, 0.88), rgba(2, 6, 14, 0.96)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+        }
+        /* Sol üstteki dev, transparan ve sola eğik logo filigranı */
+        .bg-logo-watermark {
+            position: absolute;
+            top: 60px;
+            left: -80px;
+            width: 380px;
+            height: 380px;
+            opacity: 0.15;
+            transform: rotate(-15deg);
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="text-white font-sans min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <img src="https://upload.wikimedia.org/wikipedia/tr/thumb/8/86/Fenerbah%C3%A7e_SK.svg/800px-Fenerbah%C3%A7e_SK.svg.png" class="bg-logo-watermark" alt="FB Watermark">
+
+    <header class="p-4 flex justify-between items-center max-w-5xl w-full mx-auto border-b border-yellow-500/30 relative z-10">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/tr/thumb/8/86/Fenerbah%C3%A7e_SK.svg/800px-Fenerbah%C3%A7e_SK.svg.png" alt="Fenerbahçe Logo" class="w-full h-full object-contain">
+            </div>
+            <div class="flex flex-col justify-center">
+                <h1 class="font-black text-lg tracking-wider leading-none text-white">FENERBAHÇE</h1>
+                <span class="text-[10px] text-yellow-400 font-bold tracking-widest uppercase mt-0.5">BÜYÜK KULÜP, BÜYÜK CAMİA</span>
+            </div>
+        </div>
+        <button class="text-yellow-400 text-xl focus:outline-none hover:text-white transition">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 py-8 flex flex-col items-center justify-center relative z-10">
+        
+        <div class="text-center mb-10">
+            <h2 class="text-4xl md:text-5xl font-black tracking-wide text-white uppercase mb-1 drop-shadow-lg">
+                FENERBAHÇE BAŞKANLIK SEÇİMİ
+            </h2>
+            <p class="text-yellow-400 font-bold tracking-widest text-xs md:text-sm uppercase drop-shadow">
+                GELECEĞİMİZE BİRLİKTE KARAR VERELİM
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 w-full max-w-4xl mb-12">
+            
+            <div class="bg-[#041428]/95 rounded-xl overflow-hidden shadow-2xl border border-gray-800 flex flex-col justify-between transition duration-300">
+                <div>
+                    <div class="h-72 bg-gray-900 relative overflow-hidden border-b border-gray-800">
+                        <img src="aziz.jpg" alt="Aziz Yıldırım" class="w-full h-full object-cover object-top">
+                    </div>
+                    
+                    <div class="bg-[#e2c139] p-4 text-center text-[#001529]">
+                        <h3 class="text-2xl font-black tracking-wide">AZİZ YILDIRIM</h3>
+                        <p class="text-xs font-bold uppercase tracking-wider opacity-90">BAŞKAN ADAYI</p>
+                    </div>
+
+                    <div class="p-6 space-y-4 bg-white text-gray-800">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-trophy text-yellow-600 w-6 text-center text-lg"></i>
+                            <span class="font-semibold text-sm text-gray-700">Tecrübe ve istikrar</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-chart-line text-yellow-600 w-6 text-center text-lg"></i>
+                            <span class="font-semibold text-sm text-gray-700">Güçlü yönetim</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-users text-yellow-600 w-6 text-center text-lg"></i>
+                            <span class="font-semibold text-sm text-gray-700">Büyük Fenerbahçe hedefi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 pt-0 bg-white">
+                    <button onclick="oyVer('aday1')" class="w-full bg-[#e2c139] hover:bg-[#cfaf2e] text-[#001529] font-black py-3 rounded-lg flex items-center justify-center space-x-2 transition shadow-md uppercase tracking-wider active:scale-95">
+                        <img src="https://upload.wikimedia.org/wikipedia/tr/thumb/8/86/Fenerbah%C3%A7e_SK.svg/800px-Fenerbah%C3%A7e_SK.svg.png" class="w-5 h-5 object-contain" alt="btn-logo">
+                        <span>OY VER</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-[#041428]/95 rounded-xl overflow-hidden shadow-2xl border border-gray-800 flex flex-col justify-between transition duration-300">
+                <div>
+                    <div class="h-72 bg-gray-900 relative overflow-hidden border-b border-gray-800">
+                        <img src="hakan-safi-fenerbahce-baskanligina-adayligini-acikladi.webp" alt="Hakan Safi" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="bg-[#2d37be] p-4 text-center text-white">
+                        <h3 class="text-2xl font-black tracking-wide">HAKAN SAFİ</h3>
+                        <p class="text-xs font-bold uppercase tracking-wider opacity-90">BAŞKAN ADAYI</p>
+                    </div>
+
+                    <div class="p-6 space-y-4 bg-white text-gray-800">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-regular fa-lightbulb text-blue-600 w-6 text-center text-lg"></i>
+                            <span class="font-semibold text-sm text-gray-700">Yeni vizyon, yeni projeler</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-chart-pie text-blue-600 w-6 text-center text-lg"></i>
+                            <span class="font-semibold text-sm text-gray-700">Mali disiplin ve şeffaflık</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-heart text-blue-600 w-6 text-center text-lg"></i>
+                            <span class="font-semibold text-sm text-gray-700">Birlikte güçlü yarınlara</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 pt-0 bg-white">
+                    <button onclick="oyVer('aday2')" class="w-full bg-[#2d37be] hover:bg-[#222aa3] text-white font-black py-3 rounded-lg flex items-center justify-center space-x-2 transition shadow-md uppercase tracking-wider active:scale-95">
+                        <img src="https://upload.wikimedia.org/wikipedia/tr/thumb/8/86/Fenerbah%C3%A7e_SK.svg/800px-Fenerbah%C3%A7e_SK.svg.png" class="w-5 h-5 object-contain" alt="btn-logo">
+                        <span>OY VER</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="w-full max-w-4xl bg-[#031427]/75 rounded-xl p-6 border border-gray-800/80 backdrop-blur-md shadow-2xl">
+            <p class="text-center text-xs font-bold text-yellow-500 tracking-widest uppercase mb-4">CANLI OY DURUMU</p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                <div class="text-center md:text-left flex-1 w-full">
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-wider">AZİZ YILDIRIM</p>
+                    <p id="aday1-yuzde" class="text-5xl font-black text-[#e2c139] tracking-tight">50%</p>
+                </div>
+
+                <div class="bg-gray-800/60 border border-gray-700/60 w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs text-gray-400 shadow-inner">
+                    VS
+                </div>
+
+                <div class="text-center md:text-right flex-1 w-full">
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-wider">HAKAN SAFİ</p>
+                    <p id="aday2-yuzde" class="text-5xl font-black text-[#3b46db] tracking-tight">50%</p>
+                </div>
+            </div>
+
+            <div class="flex h-3 w-full bg-gray-900 rounded-full overflow-hidden mb-4 shadow-inner">
+                <div id="aday1-bar" class="bg-[#e2c139] transition-all duration-500" style="width: 50%"></div>
+                <div id="aday2-bar" class="bg-[#2d37be] transition-all duration-500" style="width: 50%"></div>
+            </div>
+
+            <div class="text-center text-xs text-gray-400 font-semibold flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-users text-gray-500"></i>
+                <span>Toplam Oy: <strong id="toplam-oy" class="text-white">24.916</strong></span>
+            </div>
+        </div>
+
+        <div class="mt-6 flex items-center space-x-2 text-xs bg-yellow-500/10 text-yellow-500/90 border border-yellow-500/20 px-4 py-2 rounded-lg backdrop-blur-sm">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Bu site bir demo çalışmasıdır. Gerçek seçim sistemi değildir.</span>
+        </div>
+
+    </main>
+
+    <footer class="p-4 border-t border-gray-800/60 backdrop-blur-sm text-center text-[10px] text-gray-500 max-w-5xl w-full mx-auto flex flex-col md:flex-row justify-between items-center gap-4 relative z-10">
+        <div class="flex space-x-4 text-sm text-gray-400">
+            <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="font-semibold uppercase tracking-wider text-gray-400">FENERBAHÇE MAZİDE BİR TARİHTİR, BUGÜN İSE BİR DESTANDIR.</p>
+        <p>© 2026 Fenerbahçe Seçim</p>
+    </footer>
+
+    <script>
+        // Son görseldeki 24.916 toplam oya göre başlangıç senkronizasyonu (12458'er oy)
+        let aday1Oy = 12458;
+        let aday2Oy = 12458;
+
+        function panelGuncelle() {
+            let toplam = aday1Oy + aday2Oy;
+            let aday1Yuzde = Math.round((aday1Oy / toplam) * 100);
+            let aday2Yuzde = 100 - aday1Yuzde;
+
+            document.getElementById('aday1-yuzde').innerText = aday1Yuzde + '%';
+            document.getElementById('aday2-yuzde').innerText = aday2Yuzde + '%';
+            
+            document.getElementById('aday1-bar').style.width = aday1Yuzde + '%';
+            document.getElementById('aday2-bar').style.width = aday2Yuzde + '%';
+
+            document.getElementById('toplam-oy').innerText = toplam.toLocaleString('tr-TR');
+        }
+
+        function oyVer(aday) {
+            if(aday === 'aday1') {
+                aday1Oy++;
+            } else if(aday === 'aday2') {
+                aday2Oy++;
+            }
+            panelGuncelle();
+        }
+
+        panelGuncelle();
+    </script>
+</body>
+</html>
